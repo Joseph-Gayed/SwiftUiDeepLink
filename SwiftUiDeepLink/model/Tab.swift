@@ -27,6 +27,17 @@ enum Tab: String , CaseIterable{
         }
     }
     
+    var stack: any CaseIterable.Type {
+        switch self {
+        case .home:
+            return HomeStack.self
+        case .favorites:
+            return FavoritesStack.self
+        case .settings:
+            return SettingsStack.self
+        }
+    }
+    
     //Self (Capital 'S') means the type of the Current Enum which Is Tab
     static func convert(from:String)-> Self?{
         return Tab.allCases.first{ tab in
