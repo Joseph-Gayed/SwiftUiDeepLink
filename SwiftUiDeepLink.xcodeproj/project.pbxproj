@@ -15,6 +15,13 @@
 		C8E538A82B95C42000BD0B71 /* SwiftUiDeepLinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E538A72B95C42000BD0B71 /* SwiftUiDeepLinkUITests.swift */; };
 		C8E538AA2B95C42000BD0B71 /* SwiftUiDeepLinkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E538A92B95C42000BD0B71 /* SwiftUiDeepLinkUITestsLaunchTests.swift */; };
 		C8E538B92B95CEA600BD0B71 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E538B82B95CEA600BD0B71 /* Tab.swift */; };
+		C8E538BC2B95D6E100BD0B71 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E538BB2B95D6E100BD0B71 /* HomeScreen.swift */; };
+		C8E538BE2B95D70B00BD0B71 /* FavoritesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E538BD2B95D70B00BD0B71 /* FavoritesScreen.swift */; };
+		C8E538C02B95D73F00BD0B71 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E538BF2B95D73F00BD0B71 /* SettingsScreen.swift */; };
+		C8E538C32B95D7E800BD0B71 /* HomeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E538C22B95D7E800BD0B71 /* HomeStack.swift */; };
+		C8E538C52B95DAE600BD0B71 /* FavoritesStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E538C42B95DAE600BD0B71 /* FavoritesStack.swift */; };
+		C8E538C72B95DB1900BD0B71 /* SettingsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E538C62B95DB1900BD0B71 /* SettingsStack.swift */; };
+		C8E538C92B95DD6800BD0B71 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E538C82B95DD6800BD0B71 /* AppData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +53,13 @@
 		C8E538A72B95C42000BD0B71 /* SwiftUiDeepLinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUiDeepLinkUITests.swift; sourceTree = "<group>"; };
 		C8E538A92B95C42000BD0B71 /* SwiftUiDeepLinkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUiDeepLinkUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C8E538B82B95CEA600BD0B71 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		C8E538BB2B95D6E100BD0B71 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		C8E538BD2B95D70B00BD0B71 /* FavoritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreen.swift; sourceTree = "<group>"; };
+		C8E538BF2B95D73F00BD0B71 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		C8E538C22B95D7E800BD0B71 /* HomeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStack.swift; sourceTree = "<group>"; };
+		C8E538C42B95DAE600BD0B71 /* FavoritesStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStack.swift; sourceTree = "<group>"; };
+		C8E538C62B95DB1900BD0B71 /* SettingsStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStack.swift; sourceTree = "<group>"; };
+		C8E538C82B95DD6800BD0B71 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +148,9 @@
 		C8E538B62B95CE5C00BD0B71 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				C8E538C12B95D7AC00BD0B71 /* NavStacks */,
 				C8E538B82B95CEA600BD0B71 /* Tab.swift */,
+				C8E538C82B95DD6800BD0B71 /* AppData.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -142,8 +158,29 @@
 		C8E538B72B95CE6900BD0B71 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				C8E538BA2B95D6A700BD0B71 /* TabsScreens */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		C8E538BA2B95D6A700BD0B71 /* TabsScreens */ = {
+			isa = PBXGroup;
+			children = (
+				C8E538BB2B95D6E100BD0B71 /* HomeScreen.swift */,
+				C8E538BD2B95D70B00BD0B71 /* FavoritesScreen.swift */,
+				C8E538BF2B95D73F00BD0B71 /* SettingsScreen.swift */,
+			);
+			path = TabsScreens;
+			sourceTree = "<group>";
+		};
+		C8E538C12B95D7AC00BD0B71 /* NavStacks */ = {
+			isa = PBXGroup;
+			children = (
+				C8E538C22B95D7E800BD0B71 /* HomeStack.swift */,
+				C8E538C42B95DAE600BD0B71 /* FavoritesStack.swift */,
+				C8E538C62B95DB1900BD0B71 /* SettingsStack.swift */,
+			);
+			path = NavStacks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +313,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8E538C52B95DAE600BD0B71 /* FavoritesStack.swift in Sources */,
+				C8E538BC2B95D6E100BD0B71 /* HomeScreen.swift in Sources */,
 				C8E538B92B95CEA600BD0B71 /* Tab.swift in Sources */,
+				C8E538BE2B95D70B00BD0B71 /* FavoritesScreen.swift in Sources */,
 				C8E5388F2B95C41E00BD0B71 /* ContentView.swift in Sources */,
+				C8E538C02B95D73F00BD0B71 /* SettingsScreen.swift in Sources */,
 				C8E5388D2B95C41E00BD0B71 /* SwiftUiDeepLinkApp.swift in Sources */,
+				C8E538C72B95DB1900BD0B71 /* SettingsStack.swift in Sources */,
+				C8E538C32B95D7E800BD0B71 /* HomeStack.swift in Sources */,
+				C8E538C92B95DD6800BD0B71 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
