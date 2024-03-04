@@ -14,6 +14,7 @@
 		C8E5389E2B95C42000BD0B71 /* SwiftUiDeepLinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E5389D2B95C42000BD0B71 /* SwiftUiDeepLinkTests.swift */; };
 		C8E538A82B95C42000BD0B71 /* SwiftUiDeepLinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E538A72B95C42000BD0B71 /* SwiftUiDeepLinkUITests.swift */; };
 		C8E538AA2B95C42000BD0B71 /* SwiftUiDeepLinkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E538A92B95C42000BD0B71 /* SwiftUiDeepLinkUITestsLaunchTests.swift */; };
+		C8E538B92B95CEA600BD0B71 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E538B82B95CEA600BD0B71 /* Tab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		C8E538A32B95C42000BD0B71 /* SwiftUiDeepLinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUiDeepLinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8E538A72B95C42000BD0B71 /* SwiftUiDeepLinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUiDeepLinkUITests.swift; sourceTree = "<group>"; };
 		C8E538A92B95C42000BD0B71 /* SwiftUiDeepLinkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUiDeepLinkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C8E538B82B95CEA600BD0B71 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,8 @@
 		C8E5388B2B95C41E00BD0B71 /* SwiftUiDeepLink */ = {
 			isa = PBXGroup;
 			children = (
+				C8E538B72B95CE6900BD0B71 /* view */,
+				C8E538B62B95CE5C00BD0B71 /* model */,
 				C8E5388C2B95C41E00BD0B71 /* SwiftUiDeepLinkApp.swift */,
 				C8E5388E2B95C41E00BD0B71 /* ContentView.swift */,
 				C8E538902B95C42000BD0B71 /* Assets.xcassets */,
@@ -125,6 +129,21 @@
 				C8E538A92B95C42000BD0B71 /* SwiftUiDeepLinkUITestsLaunchTests.swift */,
 			);
 			path = SwiftUiDeepLinkUITests;
+			sourceTree = "<group>";
+		};
+		C8E538B62B95CE5C00BD0B71 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C8E538B82B95CEA600BD0B71 /* Tab.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C8E538B72B95CE6900BD0B71 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8E538B92B95CEA600BD0B71 /* Tab.swift in Sources */,
 				C8E5388F2B95C41E00BD0B71 /* ContentView.swift in Sources */,
 				C8E5388D2B95C41E00BD0B71 /* SwiftUiDeepLinkApp.swift in Sources */,
 			);
