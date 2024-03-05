@@ -62,6 +62,7 @@
 		C8E538C62B95DB1900BD0B71 /* SettingsStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStack.swift; sourceTree = "<group>"; };
 		C8E538C82B95DD6800BD0B71 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		C8E538CA2B95E8E800BD0B71 /* TabsContainerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsContainerScreen.swift; sourceTree = "<group>"; };
+		C8E538CE2B96902D00BD0B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +113,7 @@
 		C8E5388B2B95C41E00BD0B71 /* SwiftUiDeepLink */ = {
 			isa = PBXGroup;
 			children = (
+				C8E538CE2B96902D00BD0B71 /* Info.plist */,
 				C8E538B72B95CE6900BD0B71 /* View */,
 				C8E538B62B95CE5C00BD0B71 /* model */,
 				C8E5388C2B95C41E00BD0B71 /* SwiftUiDeepLinkApp.swift */,
@@ -493,6 +495,7 @@
 				DEVELOPMENT_TEAM = 7B4P3L5V97;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUiDeepLink/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -522,6 +525,7 @@
 				DEVELOPMENT_TEAM = 7B4P3L5V97;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUiDeepLink/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
