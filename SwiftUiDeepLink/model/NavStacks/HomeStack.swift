@@ -12,7 +12,7 @@ import Foundation
 enum HomeStack:String, CaseIterable{
     case myPosts = "My Posts"
     case oldPosts = "Old Posts"
-    case latestPosts = "latest Posts"
+    case latestPosts = "Latest Posts"
     case deletedPosts = "Deleted Posts"
     
     static func convert(from:String)->Self?{

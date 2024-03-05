@@ -32,7 +32,7 @@ struct TabsContainerScreen: View {
     
     @ViewBuilder
     func HomeView()->some View{
-        NavigationStack{
+        NavigationStack(path: $appData.homeStack){
             List{
                 ForEach(HomeStack.allCases,id:\.rawValue){ link in
                     NavigationLink(value:link){
@@ -50,7 +50,7 @@ struct TabsContainerScreen: View {
     
     @ViewBuilder
     func FavoritesView()->some View{
-        NavigationStack{
+        NavigationStack(path: $appData.favoritesStack){
             List{
                 ForEach(FavoritesStack.allCases,id:\.rawValue){ link in
                     NavigationLink(value:link){
@@ -67,7 +67,7 @@ struct TabsContainerScreen: View {
     
     @ViewBuilder
     func SettingsView()->some View{
-        NavigationStack{
+        NavigationStack(path: $appData.settingsStack){
             List{
                 ForEach(SettingsStack.allCases,id:\.rawValue){ link in
                     NavigationLink(value:link){
