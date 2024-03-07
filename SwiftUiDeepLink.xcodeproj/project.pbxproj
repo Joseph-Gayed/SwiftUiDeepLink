@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8D7E5CE2B9870E700A98FF4 /* UrlComponentExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D7E5CD2B9870E700A98FF4 /* UrlComponentExt.swift */; };
 		C8E5388D2B95C41E00BD0B71 /* SwiftUiDeepLinkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E5388C2B95C41E00BD0B71 /* SwiftUiDeepLinkApp.swift */; };
 		C8E5388F2B95C41E00BD0B71 /* AppContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E5388E2B95C41E00BD0B71 /* AppContentView.swift */; };
 		C8E538912B95C42000BD0B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8E538902B95C42000BD0B71 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C8D7E5CD2B9870E700A98FF4 /* UrlComponentExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlComponentExt.swift; sourceTree = "<group>"; };
 		C8E538892B95C41E00BD0B71 /* SwiftUiDeepLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUiDeepLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8E5388C2B95C41E00BD0B71 /* SwiftUiDeepLinkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUiDeepLinkApp.swift; sourceTree = "<group>"; };
 		C8E5388E2B95C41E00BD0B71 /* AppContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C8D7E5CC2B9870C000A98FF4 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				C8D7E5CD2B9870E700A98FF4 /* UrlComponentExt.swift */,
+			);
+			path = Ext;
+			sourceTree = "<group>";
+		};
 		C8E538802B95C41E00BD0B71 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		C8E5388B2B95C41E00BD0B71 /* SwiftUiDeepLink */ = {
 			isa = PBXGroup;
 			children = (
+				C8D7E5CC2B9870C000A98FF4 /* Ext */,
 				C8E538CE2B96902D00BD0B71 /* Info.plist */,
 				C8E538B72B95CE6900BD0B71 /* View */,
 				C8E538B62B95CE5C00BD0B71 /* model */,
@@ -325,6 +336,7 @@
 				C8E538BE2B95D70B00BD0B71 /* FavoritesScreen.swift in Sources */,
 				C8E5388F2B95C41E00BD0B71 /* AppContentView.swift in Sources */,
 				C8E538C02B95D73F00BD0B71 /* SettingsScreen.swift in Sources */,
+				C8D7E5CE2B9870E700A98FF4 /* UrlComponentExt.swift in Sources */,
 				C8E5388D2B95C41E00BD0B71 /* SwiftUiDeepLinkApp.swift in Sources */,
 				C8E538C72B95DB1900BD0B71 /* SettingsStack.swift in Sources */,
 				C8E538C32B95D7E800BD0B71 /* HomeStack.swift in Sources */,

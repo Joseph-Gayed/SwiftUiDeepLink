@@ -15,80 +15,83 @@ struct SwiftUiDeepLinkApp: App {
     var body: some Scene {
         WindowGroup {
             AppContentView()
-                //This allows all child views of AppContentView to access and observe changes to the appData object.
+            //This allows all child views of AppContentView to access and observe changes to the appData object.
                 .environmentObject(appData)
-                
-                //This will be called when deep link was triggered
+            
+            //This will be called when deep link was triggered
                 .onOpenURL(perform: { url in
-                    handleDeepLink(link: url.absoluteString)
+                    handleDeepLink(url: url)
                 })
         }
     }
     
     //go to project settings , in the info tab , under the URL types section , check the the schema.
     //For changing the tab expected urls:
-    //    swiftuideeplink://tab=home
-    //    swiftuideeplink://tab=favorites
-    //    swiftuideeplink://tab=settings
+    //    swiftuideeplink://home
+    //    swiftuideeplink://favorites
+    //    swiftuideeplink://settings
     
     //For changing the navigation inside a tab expected urls:
-    //    swiftuideeplink://tab=home?nav=My_Posts
-    //    swiftuideeplink://tab=home?nav=Old_Posts
-    //    swiftuideeplink://tab=home?nav=Latest_Posts
+    //    swiftuideeplink://home?nav=My_Posts
+    //    swiftuideeplink://home?nav=Old_Posts
+    //    swiftuideeplink://home?nav=Latest_Posts
     
-    //    swiftuideeplink://tab=favorites?nav=Joya
-    //    swiftuideeplink://tab=favorites?nav=Tia
-    //    swiftuideeplink://tab=favorites?nav=Sotir
+    //    swiftuideeplink://favorites?nav=Joya
+    //    swiftuideeplink://favorites?nav=Tia
+    //    swiftuideeplink://favorites?nav=Sotir
     
-    //    swiftuideeplink://tab=settings?nav=My_Profile
-    //    swiftuideeplink://tab=settings?nav=Data_Usage
-    //    swiftuideeplink://tab=settings?nav=Privacy_Policy
-    //    swiftuideeplink://tab=settings?nav=Terms_Of_Service
+    //    swiftuideeplink://settings?nav=My_Profile
+    //    swiftuideeplink://settings?nav=Data_Usage
+    //    swiftuideeplink://settings?nav=Privacy_Policy
+    //    swiftuideeplink://settings?nav=Terms_Of_Service
     
-    func handleDeepLink(link:String){
+    
+  
+    
+    func handleDeepLink(url:URL){
+        let link = url.absoluteString
         print(link)
         
-        //split link by "?"
-        let components = link.replacingOccurrences(of: "swiftuideeplink://", with: "").components(separatedBy: "?")
+        let urlComponents:URLComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) ?? URLComponents()
+        let tabName:String = urlComponents.host ?? ""
+        let queryParams:[String:String] = urlComponents.getQueryDictionary()
         
-        for component in components{
-            //tab change request
-            if component.contains("tab="){
-                let tabRawValue = component.replacingOccurrences(of: "tab=", with: "")
-                print("tab: "+tabRawValue)
-
-                if let requestedTab = Tab.convert(from: tabRawValue){
-                    appData.activeTab = requestedTab
-                }
+        navigate(tabName, queryParams)
+    }
+    
+    
+    fileprivate func navigate(_ tabName: String, _ queryParams: [String : String]) {
+        //navigate to 1 of the tabs
+        if let requestedTab = Tab.convert(from: tabName){
+            print("tab: \(requestedTab.rawValue )")
+            appData.activeTab = requestedTab
+        }
+        
+        //navigate to 1 of the screens inside the opened tab
+        if let requestedScreen = queryParams["nav"]?.replacingOccurrences(of: "_", with: " "){
+            print("nav: "+requestedScreen)
+            navigateToScreen(requestedScreen)
+        }
+    }
+    
+    fileprivate func navigateToScreen(_ requestedScreen: String) {
+        switch appData.activeTab {
+        case .home:
+            if let navPath = HomeStack.convert(from: requestedScreen){
+                appData.homeStack.append(navPath)
             }
             
-            //nav change request
-            if component.contains("nav="){
-                let requestedNavPath = component
-                    .replacingOccurrences(of: "tab=", with: "")
-                    .replacingOccurrences(of: "nav=", with: "")
-                    .replacingOccurrences(of: "_", with: " ")//_ represents space
-                
-                print("path: "+requestedNavPath)
-
-                switch appData.activeTab {
-                case .home:
-                    if let navPath = HomeStack.convert(from: requestedNavPath){
-                        appData.homeStack.append(navPath)
-                    }
-                
-                case .favorites:
-                    if let navPath = FavoritesStack.convert(from: requestedNavPath){
-                        appData.favoritesStack.append(navPath)
-                    }
-                
-                case .settings:
-                    if let navPath = SettingsStack.convert(from: requestedNavPath){
-                        appData.settingsStack.append(navPath)
-                    }
-                }
+        case .favorites:
+            if let navPath = FavoritesStack.convert(from: requestedScreen){
+                appData.favoritesStack.append(navPath)
             }
             
+        case .settings:
+            if let navPath = SettingsStack.convert(from: requestedScreen){
+                appData.settingsStack.append(navPath)
+            }
         }
     }
 }
+
+
