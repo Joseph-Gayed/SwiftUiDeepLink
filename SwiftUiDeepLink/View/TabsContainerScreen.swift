@@ -42,7 +42,7 @@ struct TabsContainerScreen: View {
             }
             .navigationTitle("Home")
             .navigationDestination(for: HomeStack.self) { link in
-                Text(link.rawValue)
+                HomeScreen(screenName: link.rawValue)
             }
         }
     }
@@ -60,7 +60,7 @@ struct TabsContainerScreen: View {
             }
             .navigationTitle("Favorites")
             .navigationDestination(for: FavoritesStack.self) { link in
-                Text(link.rawValue)
+                FavoritesScreen(screenName: link.rawValue)
             }
         }
     }
@@ -77,7 +77,7 @@ struct TabsContainerScreen: View {
             }
             .navigationTitle("Settings")
             .navigationDestination(for: SettingsStack.self) { link in
-                Text(link.rawValue)
+                SettingsScreen(screenName: link.rawValue)
             }
         }
     }
